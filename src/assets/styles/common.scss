@@ -1,0 +1,50 @@
+@import "./alias";
+@import "./mixin";
+
+
+
+
+// BUTTON
+.ant-btn {
+    display: flex;
+    align-items: center;
+    gap: rem(10);
+    padding: rem(16) rem(13.75);
+    border-radius: rem(6);
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.ant-btn-primary {
+    background-color: var(--blue-100);
+
+    &:hover {
+        background-color: var(--blue);
+    }
+
+    &:focus {
+        background-color: var(--blue-200);
+    }
+}
+
+
+.ant-btn-ghost {
+    background-color: #3F448E;
+    color: #fff;
+    &:hover {
+        background-color: var(--violet);
+        border-color: var(--violet);
+        color: #fff;
+    }
+    &:focus {
+        background-color: var(--violet-100);
+        border-color: var(--violet-100);
+        color: #fff;
+    }
+}
+
+p {
+    margin-bottom: 0;
+}

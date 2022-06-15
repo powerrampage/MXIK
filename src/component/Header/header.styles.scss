@@ -1,0 +1,7 @@
+@use "sass:math";
+@import "../../assets/styles/alias";
+@import "../../assets/styles/mixin";
+
+.header {
+    padding: rem(30) rem(40);
+}

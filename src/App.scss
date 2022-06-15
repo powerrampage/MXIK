@@ -1,0 +1,49 @@
+@use "sass:math";
+
+// utilize
+@import "./assets/styles/normalize";
+@import "./assets/styles/mixin";
+@import "./assets/styles/alias";
+
+// global
+@import "./assets/styles/common.scss";
+
+@import '~antd/dist/antd.css';
+
+
+body {
+    font-family: "PT Sans", $ff-default;
+    color: #000;
+    background-color: #fff;
+
+    &.active {
+        overflow: hidden;
+    }
+}
+
+
+#root {
+    min-height: 100%;
+    overflow-x: hidden;
+    display: flex;
+}
+
+[class*="__container"] {
+    max-width: $container + 1.872rem;
+    margin: 0 auto;
+    padding: 0 clamp(0.624rem, 0.5105454545rem + 0.5672727273vw, 0.936rem);
+    @include adaptive("padding-inline", 14.976, 9.984, 1);
+}
+
+
+.main {
+    flex: 1 1 83.3333333333%;
+    position: relative;
+    z-index: 2;
+    background: #fff;
+}
+
+.sidebar {
+    background: linear-gradient(180deg, #3F448E 0%, #6E75D0 100%);
+    flex: 1 1 16.66666666666667%;
+}

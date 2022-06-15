@@ -1,0 +1,57 @@
+$fontSize-base: 1rem !default;
+$ff-default: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+$xxl: 87.49875; //em 1399.98px
+$xl: 74.99875; //em 1199.98px
+$lg: 61.99875; //em 991.98px
+$md: 47.99875; //em 767.98px
+$sm: 35.99875; //em 575.98px
+$xs: 29.99875; //em 479.98px
+
+// ○○○○○○○○○○○○○ Container ○○○○○○○○○○○○○
+$maxWidth: 120; //rem 1596px
+$container: 99.75; //rem 1920px
+
+:root {
+    --brown: #78604F;
+    --brown-100: #C19E7A;
+    --brown-200: #D5B9A7;
+
+    --orange: #FC902A;
+    --yellow: #F4C344;
+
+    --green: #6B8B48;
+    --green-100: #8CC152;
+    --green-200: #B0D884;
+    --green-300: #E5F9CF;
+
+    --blue: #364BA8;
+    --blue-100: #325ECD;
+    --blue-200: #2962FF;
+    --blue-300: #5B7ED7;
+    --blue-400: #B3C3EE;
+    --blue-500: #E8F0FD;
+
+    --violet: #364BA8;
+    --violet-100: #6E75D0;
+    --violet-200: #A8AEF3;
+
+    --black: #000000;
+    --black-100: #12151C;
+    --black-200: #282F38;
+    --black-300: #717C8C;
+    --black-400: #777B82;
+
+    --grey: #D7D8DA;
+    --grey-100: #B6BCCD;
+    --grey-200: #CDD1DD;
+    --grey-300: #E6E9ED;
+    --grey-400: #F6F6F7;
+
+    --red: #E14856;
+    --red-100: #E9573F;
+    --red-200: #F3AFA5;
+    --red-300: #FDE9E6;
+
+    --cyan: #8BEFD9;
+}

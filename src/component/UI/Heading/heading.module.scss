@@ -1,0 +1,16 @@
+@import "../../../assets/styles/mixin";
+@import "../../../assets/styles/alias";
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: rem(2) solid var(--grey-200);
+}
+
+.title {}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: rem(20);
+}
