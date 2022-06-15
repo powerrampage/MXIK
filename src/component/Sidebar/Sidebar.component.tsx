@@ -15,7 +15,11 @@ export const Sidebar = () => {
             <nav className={style.menu}>
                 <ul className={style.list}>
                     <li><NavLink className={({ isActive }) => (isActive ? style.linkActive : style.link)} to="/position">Position</NavLink></li>
-                    <li><NavLink className={({ isActive }) => (isActive ? style.linkActive : style.link)} to="/sub-position">Sub position</NavLink></li>
+                    <li><NavLink className={({ isActive }) => (isActive ? style.linkActive : style.link)} to="/sub-position">Sub position</NavLink>
+                        <ul className={style.sublist}>
+                            
+                        </ul>
+                    </li>
                     <li><NavLink className={({ isActive }) => (isActive ? style.linkActive : style.link)} to="/brand">Brand</NavLink></li>
                     <li><NavLink className={({ isActive }) => (isActive ? style.linkActive : style.link)} to="/attribute">Attribute</NavLink></li>
                     <li><NavLink className={({ isActive }) => (isActive ? style.linkActive : style.link)} to="/package">Упаковка</NavLink></li>
