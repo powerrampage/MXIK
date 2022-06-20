@@ -24,7 +24,7 @@ body {
 
 #root {
     min-height: 100%;
-    overflow-x: hidden;
+    overflow: hidden;
     display: flex;
 }
 
@@ -41,9 +41,5 @@ body {
     position: relative;
     z-index: 2;
     background: #fff;
-}
-
-.sidebar {
-    background: linear-gradient(180deg, #3F448E 0%, #6E75D0 100%);
-    flex: 1 1 16.66666666666667%;
+    height: 100vh;
 }

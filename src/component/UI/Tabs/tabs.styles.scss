@@ -1,0 +1,28 @@
+@use "sass:math";
+@import "../../../assets/styles/alias";
+@import "../../../assets/styles/mixin";
+
+.tabs {
+    display: flex;
+    align-items: center;
+    gap: rem(10);
+    border-bottom: rem(1) solid var(--violet-200);
+
+    &__btn {
+        padding: rem(12) rem(20);
+        background: var(--violet-100);
+        border-radius: 0px rem(14) 0px 0px;
+        background-color: #FFF;
+        color: var(--violet-200);
+        border: rem(1) solid #A8AEF3;
+        font-weight: 700;
+        font-size: rem(19);
+        line-height: math.div(20, 19);
+
+        &.active,
+        &:hover {
+            color: #fff;
+            background-color: var(--violet-100);
+        }
+    }
+}

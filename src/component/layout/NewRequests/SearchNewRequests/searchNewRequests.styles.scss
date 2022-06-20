@@ -1,0 +1,10 @@
+@import "../../../../assets/styles/mixin";
+@import "../../../../assets/styles/alias";
+
+.searchNewRequests {
+    .ant-btn {
+        padding: rem(10) rem(25);
+        background-color: #3F448E;
+        margin-left: rem(20);
+    }
+}

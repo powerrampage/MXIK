@@ -1,18 +1,18 @@
 import { FC } from "react"
 import { Header } from "../../Header/Header.component"
-import { PositionTable } from "./PositionTable/PositionTable.component"
+import { BrandTable } from "./BrandTable/BrandTable.component"
 
-export const Position: FC = () => {
+export const Brand: FC = () => {
     const formPlaceholders = {
-        firstPlchdr: "ClassCode",
+        firstPlchdr: "SubPosition",
         secondPlchdr: "NameRu",
         thirdPlchdr: "NameUz",
     }
     return (
         <section className="section">
-            <Header title="Position" placeholders={formPlaceholders} />
+            <Header title="Brand" placeholders={formPlaceholders} />
             <div className="section__body">
-                <PositionTable />
+                <BrandTable />
             </div>
         </section>
     )

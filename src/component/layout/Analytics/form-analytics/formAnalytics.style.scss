@@ -1,0 +1,25 @@
+@import "../../../../assets/styles/mixin";
+@import "../../../../assets/styles/alias";
+
+.formAnalytics {
+    display: flex;
+    align-items: center;
+    gap: rem(20);
+    margin-bottom: rem(20);
+    flex-wrap: wrap;
+
+    &>*:not(:last-child) {
+        flex: 1 1 auto;
+    }
+
+    @media (max-width: $lg+em) {
+        justify-content: flex-end;
+        gap: rem(10);
+    }
+}
+
+.line {
+    height: rem(42);
+    flex: 0 0 rem(1) !important;
+    border: rem(1) solid var(--violet-200);
+}

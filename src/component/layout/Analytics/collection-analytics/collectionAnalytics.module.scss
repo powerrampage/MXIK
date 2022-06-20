@@ -1,0 +1,33 @@
+@use "sass:math";
+@import "../../../../assets/styles/alias";
+@import "../../../../assets/styles/mixin";
+
+.collection {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(rem(240), 1fr));
+    gap: rem(20);
+
+    @media (max-width: $lg+em) {
+        gap: rem(10);
+    }
+}
+
+.item {
+    background: #FFFFFF;
+    box-shadow: 0px rem(20) rem(20) rgba(135, 138, 146, 0.16);
+    padding: rem(20);
+    border-radius: rem(6);
+}
+
+.title {
+    font-weight: 400;
+    font-size: rem(18);
+    line-height: math.div(26, 18);
+    color: #000000;
+}
+
+.rank {
+    font-weight: 700;
+    font-size: rem(32);
+    line-height: math.div(42, 32);
+}

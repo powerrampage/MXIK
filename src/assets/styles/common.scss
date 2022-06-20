@@ -1,6 +1,77 @@
 @import "./alias";
 @import "./mixin";
 
+.sidebar {
+    background: linear-gradient(180deg, #3F448E 0%, #6E75D0 100%);
+    flex: 1 1 16.66666666666667%;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    @media (max-width: $lg+em) {
+        position: fixed;
+        top: 0;
+        left: -1000px;
+        width: 300px;
+        z-index: 999;
+        box-shadow: 0 0 rem(15) rgba(34, 35, 34, 0.6);
+        transition: left 0.4s ease 0s;
+
+        &.-active {
+            left: 0;
+        }
+    }
+}
+
+.section {
+    height: 100%;
+
+    &__body {
+        width: 100%;
+        height: 100%;
+        background-color: #F7F6FB;
+        padding: rem(30) rem(40);
+        overflow-y: auto;
+        padding-bottom: 10rem;
+
+        @media (max-width: $lg+em) {
+            padding: rem(15) rem(15);
+            padding-bottom: 10rem;
+        }
+
+        .ant-table.ant-table-bordered>.ant-table-container>.ant-table-content>table>thead>tr>th,
+        .ant-table.ant-table-bordered>.ant-table-container>.ant-table-header>table>thead>tr>th,
+        .ant-table.ant-table-bordered>.ant-table-container>.ant-table-body>table>thead>tr>th,
+        .ant-table.ant-table-bordered>.ant-table-container>.ant-table-summary>table>thead>tr>th,
+        .ant-table.ant-table-bordered>.ant-table-container>.ant-table-content>table>tbody>tr>td,
+        .ant-table.ant-table-bordered>.ant-table-container>.ant-table-header>table>tbody>tr>td,
+        .ant-table.ant-table-bordered>.ant-table-container>.ant-table-body>table>tbody>tr>td,
+        .ant-table.ant-table-bordered>.ant-table-container>.ant-table-summary>table>tbody>tr>td,
+        .ant-table.ant-table-bordered>.ant-table-container>.ant-table-content>table>tfoot>tr>th,
+        .ant-table.ant-table-bordered>.ant-table-container>.ant-table-header>table>tfoot>tr>th,
+        .ant-table.ant-table-bordered>.ant-table-container>.ant-table-body>table>tfoot>tr>th,
+        .ant-table.ant-table-bordered>.ant-table-container>.ant-table-summary>table>tfoot>tr>th,
+        .ant-table.ant-table-bordered>.ant-table-container>.ant-table-content>table>tfoot>tr>td,
+        .ant-table.ant-table-bordered>.ant-table-container>.ant-table-header>table>tfoot>tr>td,
+        .ant-table.ant-table-bordered>.ant-table-container>.ant-table-body>table>tfoot>tr>td,
+        .ant-table.ant-table-bordered>.ant-table-container>.ant-table-summary>table>tfoot>tr>td {
+            border: rem(1) solid #B6BCCD;
+        }
+
+        .ant-table-container table>thead>tr:first-child th:first-child {
+            border-top-left-radius: rem(10);
+        }
+
+        .ant-table-container table>thead>tr:first-child th:last-child {
+            border-top-right-radius: rem(10);
+        }
+
+        table {
+            background-color: transparent;
+        }
+    }
+}
+
 
 
 
@@ -8,6 +79,7 @@
 .ant-btn {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: rem(10);
     padding: rem(16) rem(13.75);
     border-radius: rem(6);
@@ -33,11 +105,13 @@
 .ant-btn-ghost {
     background-color: #3F448E;
     color: #fff;
+
     &:hover {
         background-color: var(--violet);
         border-color: var(--violet);
         color: #fff;
     }
+
     &:focus {
         background-color: var(--violet-100);
         border-color: var(--violet-100);

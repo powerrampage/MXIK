@@ -1,0 +1,69 @@
+@use "sass:math";
+@import "../../../../assets/styles/alias";
+@import "../../../../assets/styles/mixin";
+
+.collaborator {
+    margin-top: rem(55);
+    padding: rem(15) rem(46);
+    background-color: #fff;
+    border-radius: rem(6);
+
+    @media (max-width: $lg+em) {
+        padding: rem(15) rem(15);
+    }
+
+    // .collaborator__heading
+    &__heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    // .collaborator__title
+    &__title {
+        font-size: rem(24);
+        line-height: math.div(34, 24);
+    }
+
+    // .collaborator__btn
+    &__btn {
+        &.active {
+            svg {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    // .collaborator__content
+    &__content {
+        padding: rem(11) 0;
+    }
+
+    // .collaborator__table
+    &__table {
+        &_title {
+            font-weight: 700;
+        }
+    }
+
+    &__username {
+        font-size: rem(18);
+        line-height: math.div(26, 18);
+    }
+
+    &__bg {
+        &_sky {
+            background-color: #E8F0FD;
+        }
+    }
+}
+
+.ant-table-thead {
+    .ant-table-cell {
+        text-align: center;
+        padding: 1.625rem 0;
+        color: var(--black-400);
+        font-size: rem(22);
+        line-height: math.div(7, 22);
+    }
+}

@@ -1,0 +1,63 @@
+@use "sass:math";
+@import "../../../../assets/styles/alias";
+@import "../../../../assets/styles/mixin";
+
+.pieChartAngle {
+    margin-top: rem(30);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(rem(425), 1fr));
+    gap: rem(20);
+
+    // .pieChartAngle__item
+    &__item {
+        padding: rem(30);
+        background-color: #fff;
+        border-radius: rem(6);
+
+        @media (max-width: $xl+em) {
+            padding: rem(15);
+        }
+    }
+
+    // .pieChartAngle__title
+    &__title {
+        font-size: rem(24);
+        line-height: math.div(34, 24);
+        margin-bottom: em(27, 24);
+    }
+
+    // .pieChartAngle__status
+    &__status {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: rem(30);
+    }
+
+    // .pieChartAngle__info
+    // &__info {}
+}
+
+.info-pieChartAngle {
+    display: flex;
+    flex-direction: column;
+    gap: rem(10);
+
+    // .info-pieChartAngle__item
+    &__item {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        font-size: rem(18);
+        line-height: math.div(26, 18);
+        margin-bottom: em(5, 18);
+    }
+
+    &__rank {
+        font-weight: 700;
+        font-size: rem(32);
+        line-height: math.div(42, 32);
+    }
+}

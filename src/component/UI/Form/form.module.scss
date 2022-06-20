@@ -1,0 +1,26 @@
+@import "../../../assets/styles/mixin";
+
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(20);
+
+    @media (max-width: $lg+em) {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(rem(200), 1fr));
+        gap: rem(12);
+    }
+    @media (max-width: $sm+em) {
+        grid-template-columns: repeat(auto-fit, minmax(rem(140), 1fr));
+    }
+}
+
+.button {
+    width: rem(120);
+    flex: 0 0 rem(120);
+    @media (max-width: $lg+em) and (min-width: $sm+em) {
+       grid-column: 3/4;
+       justify-self: flex-end;
+    }
+}

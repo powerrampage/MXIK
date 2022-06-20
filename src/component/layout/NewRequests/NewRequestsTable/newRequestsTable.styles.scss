@@ -1,0 +1,11 @@
+@import "../../../../assets/styles/mixin";
+
+.newRequestsTable {
+    margin-top: rem(31);
+    &__actions {
+        display: flex;
+        gap: rem(15);
+        align-items: center;
+        justify-content: space-between;
+    }
+}

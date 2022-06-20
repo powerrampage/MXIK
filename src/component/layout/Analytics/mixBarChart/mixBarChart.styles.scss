@@ -1,0 +1,12 @@
+@import "../../../../assets/styles/mixin";
+
+.mixBarChart {
+    margin-top: rem(40);
+
+    @media (max-width: $lg+em) {
+        // width: 739px;
+        // overflow-x: auto;
+        // overflow-y: hidden;
+    }
+
+}

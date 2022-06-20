@@ -1,0 +1,29 @@
+@import "../../assets/styles/alias";
+@import "../../assets/styles/mixin";
+
+.burger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    height: rem(26);
+    width: rem(46);
+    margin-bottom: em(5, 5);
+
+    @media (max-width: $lg+em) {
+        display: flex;
+        margin-bottom: rem(2);
+    }
+
+    @media (max-width: $xs+em) {
+        width: rem(35);
+        height: rem(23);
+    }
+
+    &__line {
+        display: inline-block;
+        width: 100%;
+        height: rem(3);
+        background-color: var(--violet);
+    }
+}
