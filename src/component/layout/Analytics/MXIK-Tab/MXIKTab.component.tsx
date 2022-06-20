@@ -5,24 +5,24 @@ import { PieChartAngle } from "../pieChart/PieChartAngle.component"
 
 const collectSource = [
   {
-      title: "Position:",
-      rank: 169814781,
-      color: "#6E75D0"
+    title: "Position:",
+    rank: 169814781,
+    color: "#6E75D0"
   },
   {
-      title: "Sub position:",
-      rank: 169,
-      color: "#8CC152"
+    title: "Sub position:",
+    rank: 169,
+    color: "#8CC152"
   },
   {
-      title: "Brand:",
-      rank: 814781,
-      color: "#FC902A"
+    title: "Brand:",
+    rank: 814781,
+    color: "#FC902A"
   },
   {
-      title: "Attribute:",
-      rank: 257210,
-      color: "#325ECD"
+    title: "Attribute:",
+    rank: 257210,
+    color: "#325ECD"
   }
 ]
 

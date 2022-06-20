@@ -10,14 +10,20 @@
     width: rem(46);
     margin-bottom: em(5, 5);
 
-    @media (max-width: $lg+em) {
+    @media (max-width: ($lg+em)) {
         display: flex;
         margin-bottom: rem(2);
     }
 
-    @media (max-width: $xs+em) {
+    @media (max-width: ($md+em)) {
         width: rem(35);
         height: rem(23);
+    }
+
+    @media (max-width: ($xs+em)) {
+        margin-top: 4px;
+        width: 1.675rem;
+        height: rem(18);
     }
 
     &__line {

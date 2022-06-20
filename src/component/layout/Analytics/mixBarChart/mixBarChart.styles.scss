@@ -1,12 +1,18 @@
+@use "sass:math";
 @import "../../../../assets/styles/mixin";
 
 .mixBarChart {
     margin-top: rem(40);
+    // width: 100%;
+    // @media (max-width: ($md+em)) {
+    //     .recharts-responsive-container {
+    //         width: 900px !important;
+    //         overflow-x: scroll !important;
+    //     }
+    // }
+    
 
-    @media (max-width: $lg+em) {
-        // width: 739px;
-        // overflow-x: auto;
-        // overflow-y: hidden;
-    }
-
+    // width: calc(43.75rem + 20%);
+    // min-width: 100%;
 }
+

@@ -6,3 +6,8 @@ export type TypeNewRequestsTable = {
     phone: string
     product: string
 }
+
+
+export type NewRequestsTableProps = {
+    data: TypeNewRequestsTable[]
+}

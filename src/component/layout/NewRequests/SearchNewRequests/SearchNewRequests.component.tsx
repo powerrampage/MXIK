@@ -4,8 +4,11 @@ import "./searchNewRequests.styles.scss"
 
 const { Search } = Input
 
-export const SearchNewRequests: FC = () => {
-  const onSearch = (value: string) => console.log(value);
+export const SearchNewRequests: FC<any> = ({onChangeHandler}) => {
+  const onSearch = (value: string) => {
+    const searchField = value.toLowerCase()
+  };
+
   return (
     <div className='searchNewRequests'>
       <Search
@@ -14,7 +17,7 @@ export const SearchNewRequests: FC = () => {
         enterButton="Найти"
         size="large"
         onSearch={onSearch}
-        style={{maxWidth: "608px"}}
+        style={{ maxWidth: "608px" }}
       />
     </div>
   )

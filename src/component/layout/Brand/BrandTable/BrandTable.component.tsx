@@ -193,6 +193,6 @@ const randomRowKeyForTable = (record: BrandTableType) => record.brand * Math.ran
 
 export const BrandTable: FC = () => {
     return (
-        <Table rowKey={randomRowKeyForTable} dataSource={dataSource} columns={columns} bordered={true} />
+        <Table rowKey={randomRowKeyForTable} dataSource={dataSource} columns={columns} bordered={true} scroll={{ x: 'calc(43.75rem + 20%)' }} />
     )
 }

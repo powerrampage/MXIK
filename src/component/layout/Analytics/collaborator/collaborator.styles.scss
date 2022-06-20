@@ -8,7 +8,7 @@
     background-color: #fff;
     border-radius: rem(6);
 
-    @media (max-width: $lg+em) {
+    @media (max-width: ($lg+em)) {
         padding: rem(15) rem(15);
     }
 
@@ -60,8 +60,9 @@
 
 .ant-table-thead {
     .ant-table-cell {
+        line-height: 0.9 !important;
         text-align: center;
-        padding: 1.625rem 0;
+        padding: 1.625rem 0.2rem;
         color: var(--black-400);
         font-size: rem(22);
         line-height: math.div(7, 22);

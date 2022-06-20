@@ -5,8 +5,12 @@
 .pieChartAngle {
     margin-top: rem(30);
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(rem(425), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(rem(340), 1fr));
     gap: rem(20);
+
+    @media (max-width: math.div(360em, 16)) {
+        grid-template-columns: repeat(auto-fit, minmax(rem(200), 1fr));
+    }
 
     // .pieChartAngle__item
     &__item {
@@ -14,8 +18,12 @@
         background-color: #fff;
         border-radius: rem(6);
 
-        @media (max-width: $xl+em) {
+        @media (max-width: ($xl+em)) {
             padding: rem(15);
+        }
+
+        @media (max-width: ($xs+em)) {
+            padding: rem(8);
         }
     }
 
@@ -24,6 +32,10 @@
         font-size: rem(24);
         line-height: math.div(34, 24);
         margin-bottom: em(27, 24);
+
+        @media (max-width: ($xs+em)) {
+            margin-bottom: 0.5em;
+        }
     }
 
     // .pieChartAngle__status
@@ -32,6 +44,30 @@
         align-items: center;
         justify-content: space-evenly;
         gap: rem(30);
+
+        @media (max-width: ($xl+em)) {
+            .recharts-wrapper {
+                width: rem(180) !important;
+                height: rem(180) !important;
+
+                svg {
+                    width: rem(180) !important;
+                    height: rem(180) !important;
+                }
+            }
+        }
+
+        @media (max-width: ($xs+em)) {
+            .recharts-wrapper {
+                width: rem(140) !important;
+                height: rem(140) !important;
+
+                svg {
+                    width: rem(140) !important;
+                    height: rem(140) !important;
+                }
+            }
+        }
     }
 
     // .pieChartAngle__info

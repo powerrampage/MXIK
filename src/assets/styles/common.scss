@@ -8,7 +8,7 @@
     flex-direction: column;
     height: 100vh;
 
-    @media (max-width: $lg+em) {
+    @media (max-width: ($lg+em)) {
         position: fixed;
         top: 0;
         left: -1000px;
@@ -34,9 +34,13 @@
         overflow-y: auto;
         padding-bottom: 10rem;
 
-        @media (max-width: $lg+em) {
+        @media (max-width: ($lg+em)) {
             padding: rem(15) rem(15);
             padding-bottom: 10rem;
+        }
+
+        @media (max-width: ($xs+em)) {
+            padding: rem(15) rem(10);
         }
 
         .ant-table.ant-table-bordered>.ant-table-container>.ant-table-content>table>thead>tr>th,
@@ -72,9 +76,6 @@
     }
 }
 
-
-
-
 // BUTTON
 .ant-btn {
     display: flex;
@@ -85,8 +86,8 @@
     border-radius: rem(6);
 
     font-weight: 700;
-    font-size: 14px;
-    line-height: 22px;
+    font-size: rem(14);
+    line-height: math.div(22, 14);
 }
 
 .ant-btn-primary {

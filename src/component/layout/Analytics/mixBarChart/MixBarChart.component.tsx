@@ -92,25 +92,25 @@ const dataBarChart = [
 export const MixBarChart = () => {
     return (
         <div className="mixBarChart">
-            <ResponsiveContainer width="100%" aspect={4}>
-            <BarChart
-                data={dataBarChart}
-                margin={{
-                    top: 20,
-                    right: 30,
-                    left: 20,
-                    bottom: 5,
-                }}
-            >
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="name" />
-                <YAxis />
-                <Tooltip />
-                <Bar dataKey="Position" fill="#A8AEF3" />
-                <Bar dataKey="SubPosition" fill="#8CC152" />
-                <Bar dataKey="Brand" fill="#FC902A" />
-                <Bar dataKey="Attribute" stackId="a" fill="#325ECD" />
-            </BarChart>
+            <ResponsiveContainer width={"100%"} aspect={4}>
+                <BarChart
+                    data={dataBarChart}
+                    margin={{
+                        top: 20,
+                        right: 30,
+                        left: 20,
+                        bottom: 5,
+                    }}
+                >
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <XAxis dataKey="name" />
+                    <YAxis />
+                    <Tooltip />
+                    <Bar dataKey="Position" fill="#A8AEF3" />
+                    <Bar dataKey="SubPosition" fill="#8CC152" />
+                    <Bar dataKey="Brand" fill="#FC902A" />
+                    <Bar dataKey="Attribute" stackId="a" fill="#325ECD" />
+                </BarChart>
             </ResponsiveContainer>
         </div>
     )

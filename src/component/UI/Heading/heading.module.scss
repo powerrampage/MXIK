@@ -11,16 +11,16 @@
     &:not(:last-child) {
         margin-bottom: em(40, 16);
 
-        @media (max-width: $lg+em) {
+        @media (max-width: ($lg+em)) {
             margin-bottom: em(30, 16);
         }
 
-        @media (max-width: $xs+em) {
+        @media (max-width: ($xs+em)) {
             margin-bottom: em(20, 16);
         }
     }
 
-    @media (max-width: $lg+em) {
+    @media (max-width: ($lg+em)) {
         h1 {
             margin-bottom: 0.05em;
         }
@@ -32,12 +32,15 @@
     align-items: center;
     gap: rem(20);
 
-    @media (max-width: $lg+em) {
+    @media (max-width: ($lg+em)) {
         gap: rem(10);
-
     }
 
-    @media (max-width: 37.5em) {
+    @media (max-width: ($xs+em)) {
+        gap: rem(4);
+    }
+
+    @media (max-width: math.div(650em, 16)) {
         span {
             display: none;
         }
@@ -49,11 +52,15 @@
     align-items: center;
     gap: rem(30);
 
-    @media (max-width: $md+em) {
+    @media (max-width: ($md+em)) {
         gap: 1rem;
     }
 
+    @media (max-width: ($xs+em)) {
+        gap: 0.8rem;
+    }
+
     h1 {
-        @include clamp-fontsize(math.div(38rem, 16), math.div(30rem, 16), 20rem);
+        @include clamp-fontsize(math.div(38rem, 16), math.div(27rem, 16), 20rem);
     }
 }

@@ -1,105 +1,15 @@
+import { FC } from "react";
 import { Table } from "antd";
 import type { ColumnsType } from 'antd/lib/table';
-import { TypeNewRequestsTable } from "./newRequestsTable.type";
+import { NewRequestsTableProps, TypeNewRequestsTable } from "./newRequestsTable.type";
 import "./newRequestsTable.styles.scss"
 // ICONS
 import { ReactComponent as CheckIcon } from "../../../../assets/icons/check.svg"
 import { ReactComponent as FileIcon } from "../../../../assets/icons/file.svg"
 import { ReactComponent as ErrorIcon } from "../../../../assets/icons/error-circle.svg"
 
-const dataSource = [
-  {
-    group: 123,
-    FMO: "Ахмедов И.А.",
-    creater: "10.12.2022",
-    nameCompany: "СП ООО “Тортик и мармеладик”",
-    phone: "+998 90 000-00-00",
-    product: "Пищевые продукты питания",
-  },
-  {
-    group: 123,
-    FMO: "Ахмедов И.А.",
-    creater: "10.12.2022",
-    nameCompany: "СП ООО “Тортик и мармеладик”",
-    phone: "+998 90 000-00-00",
-    product: "Пищевые продукты питания",
-  },
-  {
-    group: 123,
-    FMO: "Ахмедов И.А.",
-    creater: "10.12.2022",
-    nameCompany: "СП ООО “Тортик и мармеладик”",
-    phone: "+998 90 000-00-00",
-    product: "Пищевые продукты питания",
-  },
-  {
-    group: 123,
-    FMO: "Ахмедов И.А.",
-    creater: "10.12.2022",
-    nameCompany: "СП ООО “Тортик и мармеладик”",
-    phone: "+998 90 000-00-00",
-    product: "Пищевые продукты питания",
-  },
-  {
-    group: 123,
-    FMO: "Ахмедов И.А.",
-    creater: "10.12.2022",
-    nameCompany: "СП ООО “Тортик и мармеладик”",
-    phone: "+998 90 000-00-00",
-    product: "Пищевые продукты питания",
-  },
-  {
-    group: 123,
-    FMO: "Ахмедов И.А.",
-    creater: "10.12.2022",
-    nameCompany: "СП ООО “Тортик и мармеладик”",
-    phone: "+998 90 000-00-00",
-    product: "Пищевые продукты питания",
-  },
-  {
-    group: 123,
-    FMO: "Ахмедов И.А.",
-    creater: "10.12.2022",
-    nameCompany: "СП ООО “Тортик и мармеладик”",
-    phone: "+998 90 000-00-00",
-    product: "Пищевые продукты питания",
-  },
-  {
-    group: 123,
-    FMO: "Ахмедов И.А.",
-    creater: "10.12.2022",
-    nameCompany: "СП ООО “Тортик и мармеладик”",
-    phone: "+998 90 000-00-00",
-    product: "Пищевые продукты питания",
-  },
-  {
-    group: 123,
-    FMO: "Ахмедов И.А.",
-    creater: "10.12.2022",
-    nameCompany: "СП ООО “Тортик и мармеладик”",
-    phone: "+998 90 000-00-00",
-    product: "Пищевые продукты питания",
-  },
-  {
-    group: 123,
-    FMO: "Ахмедов И.А.",
-    creater: "10.12.2022",
-    nameCompany: "СП ООО “Тортик и мармеладик”",
-    phone: "+998 90 000-00-00",
-    product: "Пищевые продукты питания",
-  },
-  {
-    group: 123,
-    FMO: "Ахмедов И.А.",
-    creater: "10.12.2022",
-    nameCompany: "СП ООО “Тортик и мармеладик”",
-    phone: "+998 90 000-00-00",
-    product: "Пищевые продукты питания",
-  },
-];
 
-
-export const NewRequestsTable = () => {
+export const NewRequestsTable: FC<NewRequestsTableProps> = ({ data }) => {
   const columns: ColumnsType<TypeNewRequestsTable> = [
     {
       title: '№',
@@ -142,11 +52,11 @@ export const NewRequestsTable = () => {
       dataIndex: 'product',
     },
   ];
-  const randomRowKeyForTable = (record: TypeNewRequestsTable) => Math.random() * Math.random();
+  const randomRowKeyForTable = (r: TypeNewRequestsTable) => Math.random() * Math.random();
 
   return (
     <div className="newRequestsTable">
-      <Table rowKey={randomRowKeyForTable} dataSource={dataSource} columns={columns} bordered scroll={{ x: 'calc(45.75rem + 20%)' }} />
+      <Table rowKey={randomRowKeyForTable} dataSource={data} columns={columns} bordered scroll={{ x: 'calc(45.75rem + 20%)' }} />
     </div>
   )
 }

@@ -19,6 +19,11 @@
         font-size: rem(19);
         line-height: math.div(20, 19);
 
+        @media (max-width: ($sm+em)) {
+            font-size: rem(14);
+            padding: rem(10) rem(15);
+        }
+
         &.active,
         &:hover {
             color: #fff;

@@ -156,7 +156,7 @@ export const Collaborator: FC = () => {
             {isActive &&
                 <div className="collaborator__content">
                     <div className="collaborator__table">
-                        <Table rowKey={randomRowKeyForTable} dataSource={dataSource} columns={columns} />
+                        <Table rowKey={randomRowKeyForTable} dataSource={dataSource} columns={columns} scroll={{ x: 'calc(43.75rem + 20%)' }} />
                     </div>
                 </div>}
         </div>
