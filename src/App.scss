@@ -1,5 +1,9 @@
 @use "sass:math";
 
+// FONTS
+
+  
+
 // utilize
 @import "./assets/styles/normalize";
 @import "./assets/styles/mixin";
@@ -8,7 +12,9 @@
 // global
 @import "./assets/styles/common.scss";
 
+// antd
 @import '~antd/dist/antd.css';
+
 
 
 body {

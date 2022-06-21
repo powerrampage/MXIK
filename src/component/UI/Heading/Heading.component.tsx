@@ -5,6 +5,7 @@ import { ReactComponent as DownloadIcon } from "../../../assets/icons/download.s
 import { ReactComponent as SearchIcon } from "../../../assets/icons/search.svg"
 import { ButtonUI } from "../Button/Button"
 import { HandleSidebar } from "../../HandleSidebar/HandleSidebar.component"
+import { Link } from "react-router-dom"
 
 export const Heading = ({ title }: HeadingProps) => {
 
@@ -18,7 +19,7 @@ export const Heading = ({ title }: HeadingProps) => {
             </div>
             <div className={style.buttons}>
                 <ButtonUI icon={<DownloadIcon />} type="primary">Загрузить XLS</ButtonUI>
-                <ButtonUI icon={<SearchIcon />} type="ghost">Найти/заменить</ButtonUI>
+                <Link to="/find"><ButtonUI icon={<SearchIcon />} type="ghost">Найти/заменить</ButtonUI></Link>
             </div>
         </div>
     )

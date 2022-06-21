@@ -7,7 +7,8 @@
     justify-content: space-between;
     cursor: pointer;
     height: rem(26);
-    width: rem(46);
+    // width: rem(46);
+    flex: 0 0 rem(46);
     margin-bottom: em(5, 5);
 
     @media (max-width: ($lg+em)) {
@@ -16,13 +17,14 @@
     }
 
     @media (max-width: ($md+em)) {
+        flex: 0 0 rem(35);
         width: rem(35);
         height: rem(23);
     }
 
     @media (max-width: ($xs+em)) {
         margin-top: 4px;
-        width: 1.675rem;
+        flex: 0 0 1.675rem;
         height: rem(18);
     }
 

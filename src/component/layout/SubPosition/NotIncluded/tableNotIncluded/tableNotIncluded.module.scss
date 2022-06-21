@@ -1,0 +1,7 @@
+@import "../../../../../assets/styles/mixin";
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: rem(15);
+}

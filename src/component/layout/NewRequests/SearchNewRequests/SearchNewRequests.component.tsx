@@ -1,10 +1,11 @@
 import { FC } from 'react';
 import { Input } from 'antd';
 import "./searchNewRequests.styles.scss"
+import { SearchNewRequestsProps } from './searchNewRequests.type';
 
 const { Search } = Input
 
-export const SearchNewRequests: FC<any> = ({onChangeHandler}) => {
+export const SearchNewRequests: FC<SearchNewRequestsProps> = ({ onChangeHandler }) => {
   const onSearch = (value: string) => {
     const searchField = value.toLowerCase()
   };

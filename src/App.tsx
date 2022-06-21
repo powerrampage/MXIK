@@ -7,6 +7,9 @@ import { Brand } from './component/layout/Brand/Brand.component';
 import { Analytics } from './component/layout/Analytics/Analytics.component';
 import { HandleSidebarProvider } from './contexts/handleSidebar.context';
 import { NewRequests } from './component/layout/NewRequests/NewRequests.component';
+import { FindAndEdit } from './component/layout/FindAndEdit/FindAndEdit.component';
+import { SubPosition } from './component/layout/SubPosition/SubPosition.component';
+import { Attribute } from './component/layout/Attribute/Attribute.components';
 
 const App: FC = () => {
   return (
@@ -16,9 +19,12 @@ const App: FC = () => {
         <main className='main'>
           <Routes>
             <Route path='/position' element={<Position />} />
+            <Route path="/sub-position/*" element={<SubPosition />} />
             <Route path='/brand' element={<Brand />} />
+            <Route path="/attribute/*" element={<Attribute />} />
             <Route path='/analytics/*' element={<Analytics />} />
             <Route path='/new-requests' element={<NewRequests />} />
+            <Route path="/find" element={<FindAndEdit />} />
           </Routes>
         </main>
       </HandleSidebarProvider>

@@ -221,20 +221,30 @@
     // padding-left: rem(40);
 }
 
-.subItem {
+.subLinkActive,
+.subLink {
     display: inline-flex;
     align-items: center;
     gap: rem(8);
     padding: rem(13) 0;
-    color: #FFFFFF;
     font-size: rem(18);
     line-height: math.div(26, 18);
     padding-left: rem(40);
     width: 100%;
     transition: background-color 0.2s cubic-bezier(0.4, 0, 1, 1);
+    color: var(--violet-200);
 
     &:hover {
         background-color: #3c407a;
+        color: var(--violet-200);
+    }
+}
+
+.subLinkActive {
+    color: #FFFFFF;
+    transition: color 0.2s cubic-bezier(0.4, 0, 1, 1);
+
+    &:hover {
         color: #fff;
     }
 }

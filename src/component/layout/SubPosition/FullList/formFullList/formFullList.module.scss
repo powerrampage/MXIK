@@ -1,0 +1,15 @@
+@import "../../../../../assets/styles/mixin";
+
+.form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(rem(200), 1fr));
+    gap: rem(20);
+
+    @media (max-width: ($md+em)) {
+        gap: rem(12);
+    }
+
+    @media (max-width: ($xs+em)) {
+        grid-template-columns: repeat(auto-fit, minmax(rem(130), 1fr));
+    }
+}

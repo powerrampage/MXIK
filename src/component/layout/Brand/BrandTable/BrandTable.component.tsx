@@ -88,18 +88,18 @@ const dataSource: BrandTableType[] = [
     },
 ];
 
-const columns: ColumnsType<BrandTableType> = [
+const columns: ColumnsType<BrandTableType> | any = [
     {
         title: '№',
         dataIndex: 'numero',
         key: "attribute",
-        render: (t: string, r, i) => <p>{i + 1}</p>,
+        render: (text: string, r: BrandTableType, index: number) => <p>{index + 1}</p>,
     },
     {
         title: 'SubPosition',
         dataIndex: 'subposition',
         key: "subposition",
-        render(text, r, index) {
+        onCell(text: string, r: BrandTableType, index: number) {
             return {
                 props: {
                     style: { background: (index % 2 === 0) ? "rgb(232,240,253)" : "" }
@@ -112,7 +112,7 @@ const columns: ColumnsType<BrandTableType> = [
         title: 'NameRu',
         dataIndex: 'nameRu',
         key: "nameRu",
-        render(text, r, index) {
+        onCell(text: string, r: BrandTableType, index: number) {
             return {
                 props: {
                     style: { background: (index % 2 === 0) ? "rgb(232,240,253)" : "" }
@@ -125,7 +125,7 @@ const columns: ColumnsType<BrandTableType> = [
         title: 'NameUz',
         dataIndex: 'nameUz',
         key: "nameUz",
-        render(text, r, index) {
+        onCell(text: string, r: BrandTableType, index: number) {
             return {
                 props: {
                     style: { background: (index % 2 === 0) ? "rgb(232,240,253)" : "" }
@@ -138,7 +138,7 @@ const columns: ColumnsType<BrandTableType> = [
         title: 'Sub position',
         dataIndex: 'subPosition',
         key: "subPosition",
-        render(text, r, index) {
+        onCell(text: string, r: BrandTableType, index: number) {
             return {
                 props: {
                     style: { background: (index % 2 === 0) ? "#F7F6FB" : "" }
@@ -151,7 +151,7 @@ const columns: ColumnsType<BrandTableType> = [
         title: 'Brand',
         dataIndex: 'brand',
         key: "brand",
-        render(text, r, index) {
+        onCell(text: string, r: BrandTableType, index: number) {
             return {
                 props: {
                     style: { background: (index % 2 === 0) ? "#F7F6FB" : "" }
@@ -164,7 +164,7 @@ const columns: ColumnsType<BrandTableType> = [
         title: 'Attribute',
         dataIndex: 'attribute',
         key: "attribute",
-        render(text, r, index) {
+        onCell(text: string, r: BrandTableType, index: number) {
             return {
                 props: {
                     style: { background: (index % 2 === 0) ? "#F7F6FB" : "" }
@@ -177,7 +177,7 @@ const columns: ColumnsType<BrandTableType> = [
         title: 'Упаковка',
         dataIndex: 'install',
         key: "install",
-        render(text, r, index) {
+        onCell(text: string, r: BrandTableType, index: number) {
             return {
                 props: {
                     style: { background: (index % 2 === 0) ? "#F7F6FB" : "" }

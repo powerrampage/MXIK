@@ -88,17 +88,17 @@ const dataSource: DataType[] = [
     },
 ];
 
-const columns: ColumnsType<DataType> = [
+const columns: ColumnsType<DataType> | any = [
     {
         title: '№',
         dataIndex: 'numero',
-        render: (text: string, r, i) => <p>{i + 1}</p>,
+        render: (text: string, r: DataType, index: number) => <p>{index + 1}</p>,
     },
     {
         title: 'ClassCode',
         dataIndex: 'classcode',
         responsive: ['lg'],
-        render(text, r, index) {
+        onCell(text: string, r: DataType, index: number) {
             return {
                 props: {
                     style: { background: (index % 2 === 0) ? "rgb(232,240,253)" : "" }
@@ -110,7 +110,7 @@ const columns: ColumnsType<DataType> = [
     {
         title: 'NameRu',
         dataIndex: 'nameRu',
-        render(text, r, index) {
+        onCell(text: string, r: DataType, index: number) {
             return {
                 props: {
                     style: { background: (index % 2 === 0) ? "rgb(232,240,253)" : "" }
@@ -122,7 +122,7 @@ const columns: ColumnsType<DataType> = [
     {
         title: 'NameUz',
         dataIndex: 'nameUz',
-        render(text, r, index) {
+        onCell(text: string, r: DataType, index: number) {
             return {
                 props: {
                     style: { background: (index % 2 === 0) ? "rgb(232,240,253)" : "" }
@@ -134,7 +134,7 @@ const columns: ColumnsType<DataType> = [
     {
         title: 'Sub position',
         dataIndex: 'subPosition',
-        render(text, r, index) {
+        onCell(text: string, r: DataType, index: number) {
             return {
                 props: {
                     style: { background: (index % 2 === 0) ? "#F7F6FB" : "" }
@@ -146,7 +146,7 @@ const columns: ColumnsType<DataType> = [
     {
         title: 'Brand',
         dataIndex: 'brand',
-        render(text, r, index) {
+        onCell(text: string, r: DataType, index: number) {
             return {
                 props: {
                     style: { background: (index % 2 === 0) ? "#F7F6FB" : "" }
@@ -158,7 +158,7 @@ const columns: ColumnsType<DataType> = [
     {
         title: 'Attribute',
         dataIndex: 'attribute',
-        render(text, r, index) {
+        onCell(text: string, r: DataType, index: number) {
             return {
                 props: {
                     style: { background: (index % 2 === 0) ? "#F7F6FB" : "" }
@@ -170,7 +170,7 @@ const columns: ColumnsType<DataType> = [
     {
         title: 'Упаковка',
         dataIndex: 'install',
-        render(text, r, index) {
+        onCell(text: string, r: DataType, index: number) {
             return {
                 props: {
                     style: { background: (index % 2 === 0) ? "#F7F6FB" : "" }
@@ -191,4 +191,3 @@ export const PositionTable: FC = () => {
         </div>
     )
 }
-

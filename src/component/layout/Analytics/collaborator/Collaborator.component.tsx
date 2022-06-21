@@ -79,7 +79,7 @@ export const Collaborator: FC = () => {
         setIsActive(!isActive)
     }
 
-    const columns: ColumnsType<CollaboratorType> = [
+    const columns: ColumnsType<CollaboratorType> | any = [
         {
             title: "",
             dataIndex: "no",
@@ -94,7 +94,7 @@ export const Collaborator: FC = () => {
         {
             title: 'Всего',
             dataIndex: 'total',
-            render(t: string, r: CollaboratorType, i: number) {
+            onCell(t: string, r: CollaboratorType, i: number) {
                 return {
                     props: {
                         style: { background: "#E8F0FD", textAlign: "center" }
@@ -106,7 +106,7 @@ export const Collaborator: FC = () => {
         {
             title: 'Принято',
             dataIndex: 'received',
-            render(t: string, r: CollaboratorType, i: number) {
+            onCell(t: string, r: CollaboratorType, i: number) {
                 return {
                     props: {
                         style: { background: "#fff", textAlign: "center" }
@@ -118,7 +118,7 @@ export const Collaborator: FC = () => {
         {
             title: 'Отказано',
             dataIndex: 'denied',
-            render(t: string, r: CollaboratorType, i: number) {
+            onCell(t: string, r: CollaboratorType, i: number) {
                 return {
                     props: {
                         style: { background: "#E8F0FD", textAlign: "center" }
@@ -130,7 +130,7 @@ export const Collaborator: FC = () => {
         {
             title: 'Остолось',
             dataIndex: 'remained',
-            render(t: string, r: CollaboratorType, i: number) {
+            onCell(t: string, r: CollaboratorType, i: number) {
                 return {
                     props: {
                         style: { background: "#fff", textAlign: "center" }

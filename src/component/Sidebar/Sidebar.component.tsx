@@ -1,5 +1,6 @@
 import React, { Fragment, useState, useContext } from "react"
 import { Link, NavLink } from "react-router-dom"
+import { useLocation } from 'react-router-dom';
 import style from "./sidebar.module.scss"
 // ICONS
 import { ReactComponent as SubArrowIcon } from "../../assets/icons/subArrow.svg"
@@ -29,6 +30,16 @@ export const Sidebar = () => {
     const toSubListHandler = () => {
         setIsActiveToSubList(!isActiveToSubList)
     }
+    // Sidebar Sublist Second
+    const [isActiveToSubListSec, setIsActiveToSubListSec] = useState(false);
+    const toSubListHandlerSec = () => {
+        setIsActiveToSubListSec(!isActiveToSubListSec)
+    }
+
+    const handleSubItem = (event: React.MouseEvent<HTMLLIElement>) => {
+        event.stopPropagation()
+    }
+    const { pathname } = useLocation();
 
     // HANDLE SIDEBAR
     const handleCloseSidebar = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -58,23 +69,36 @@ export const Sidebar = () => {
                 <ul className={style.list}>
                     <li><NavLink className={({ isActive }) => (isActive ? style.linkActive : style.link)} to="/position">Position</NavLink></li>
                     <li onClick={toSubListHandler} className={isActiveToSubList ? style.toSubListActive : style.toSubList}>
-                        <NavLink className={({ isActive }) => (isActive ? style.linkActive : style.link)} to="/sub-position">Sub position
+                        <NavLink className={({ isActive }) => (isActive || ['/full-list', '/not-included'].includes(pathname) ? style.linkActive : style.link)} to="/sub-position">Sub position
                             <span className={style.subArrow}><SubArrowIcon style={{ height: "1rem", width: "1rem" }} /></span>
                         </NavLink>
                         <ul className={style.sublist}>
-                            <li><NavLink className={style.subItem} to="/sub-position">
+                            <li onClick={handleSubItem}><NavLink className={({ isActive }) => (isActive ? style.subLinkActive : style.subLink)} to="/sub-position">
                                 <SolidArrow />
                                 Тўлиқ рўйхат</NavLink>
                             </li>
-                            <li><NavLink className={style.subItem} to="/sub-position">
+                            <li onClick={handleSubItem}><NavLink className={({ isActive }) => (isActive ? style.subLinkActive : style.subLink)} to="/sub-position/not-included">
                                 <SolidArrow />
                                 Киритилманган</NavLink>
                             </li>
                         </ul>
                     </li>
                     <li><NavLink className={({ isActive }) => (isActive ? style.linkActive : style.link)} to="/brand">Brand</NavLink></li>
-                    <li><NavLink className={({ isActive }) => (isActive ? style.linkActive : style.link)} to="/attribute">Attribute
-                        <span className={style.subArrow}><SubArrowIcon style={{ height: "1rem", width: "1rem" }} /></span></NavLink></li>
+                    <li onClick={toSubListHandlerSec} className={isActiveToSubListSec ? style.toSubListActive : style.toSubList}>
+                        <NavLink className={({ isActive }) => (isActive || ['/full-list', '/not-included'].includes(pathname) ? style.linkActive : style.link)} to="/attribute">Attribute
+                            <span className={style.subArrow}><SubArrowIcon style={{ height: "1rem", width: "1rem" }} /></span>
+                        </NavLink>
+                        <ul className={style.sublist}>
+                            <li onClick={handleSubItem}><NavLink className={({ isActive }) => (isActive ? style.subLinkActive : style.subLink)} to="/attribute">
+                                <SolidArrow />
+                                Тўлиқ рўйхат</NavLink>
+                            </li>
+                            <li onClick={handleSubItem}><NavLink className={({ isActive }) => (isActive ? style.subLinkActive : style.subLink)} to="/attribute/not-included">
+                                <SolidArrow />
+                                Киритилманган</NavLink>
+                            </li>
+                        </ul>
+                    </li>
                     <li><NavLink className={({ isActive }) => (isActive ? style.linkActive : style.link)} to="/package">Упаковка</NavLink></li>
                     <li><NavLink className={({ isActive }) => (isActive ? style.linkActive : style.link)} to="/analytics">Analytics</NavLink></li>
                 </ul>

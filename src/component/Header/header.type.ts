@@ -7,4 +7,5 @@ export type HeaderProps = {
         title: string,
         link: string
     }[]
+    Form?: React.ReactElement
 }
