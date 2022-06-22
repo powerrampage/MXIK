@@ -5,7 +5,7 @@ import { TableFullList } from "./tableFullList/TableFullList.component"
 
 export const FullList: FC = () => {
   return (
-    <section className="section">
+    <section className="section sub-position">
       <Header title="Sub position тўлиқ рўйхат" Form={<FormFullList />} />
       <div className="section__body">
         <TableFullList />

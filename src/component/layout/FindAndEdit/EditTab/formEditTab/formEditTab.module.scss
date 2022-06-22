@@ -1,0 +1,12 @@
+@import "../../../../../assets/styles/mixin";
+
+.formEditTab {
+    margin: rem(25) 0;
+    display: flex;
+    gap: rem(20);
+    height: rem(134);
+    
+    textarea {
+        border-radius: rem(6);
+    }
+}

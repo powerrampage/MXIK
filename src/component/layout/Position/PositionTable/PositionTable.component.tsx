@@ -92,13 +92,21 @@ const columns: ColumnsType<DataType> | any = [
     {
         title: '№',
         dataIndex: 'numero',
-        render: (text: string, r: DataType, index: number) => <p>{index + 1}</p>,
+        // render: (text: string, r: DataType, index: number) => <p>{index + 1}</p>,
+        render(text: string, r: DataType, index: number) {
+            return {
+                props: {
+                    style: { background: (index % 2 === 0) ? "rgb(232,240,253)" : "" }
+                },
+                children: <p>{index + 1}</p>
+            };
+        }
     },
     {
         title: 'ClassCode',
         dataIndex: 'classcode',
         responsive: ['lg'],
-        onCell(text: string, r: DataType, index: number) {
+        render(text: string, r: DataType, index: number) {
             return {
                 props: {
                     style: { background: (index % 2 === 0) ? "rgb(232,240,253)" : "" }
@@ -110,7 +118,7 @@ const columns: ColumnsType<DataType> | any = [
     {
         title: 'NameRu',
         dataIndex: 'nameRu',
-        onCell(text: string, r: DataType, index: number) {
+        render(text: string, r: DataType, index: number) {
             return {
                 props: {
                     style: { background: (index % 2 === 0) ? "rgb(232,240,253)" : "" }
@@ -122,7 +130,7 @@ const columns: ColumnsType<DataType> | any = [
     {
         title: 'NameUz',
         dataIndex: 'nameUz',
-        onCell(text: string, r: DataType, index: number) {
+        render(text: string, r: DataType, index: number) {
             return {
                 props: {
                     style: { background: (index % 2 === 0) ? "rgb(232,240,253)" : "" }
@@ -134,7 +142,7 @@ const columns: ColumnsType<DataType> | any = [
     {
         title: 'Sub position',
         dataIndex: 'subPosition',
-        onCell(text: string, r: DataType, index: number) {
+        render(text: string, r: DataType, index: number) {
             return {
                 props: {
                     style: { background: (index % 2 === 0) ? "#F7F6FB" : "" }
@@ -146,7 +154,7 @@ const columns: ColumnsType<DataType> | any = [
     {
         title: 'Brand',
         dataIndex: 'brand',
-        onCell(text: string, r: DataType, index: number) {
+        render(text: string, r: DataType, index: number) {
             return {
                 props: {
                     style: { background: (index % 2 === 0) ? "#F7F6FB" : "" }
@@ -158,7 +166,7 @@ const columns: ColumnsType<DataType> | any = [
     {
         title: 'Attribute',
         dataIndex: 'attribute',
-        onCell(text: string, r: DataType, index: number) {
+        render(text: string, r: DataType, index: number) {
             return {
                 props: {
                     style: { background: (index % 2 === 0) ? "#F7F6FB" : "" }
@@ -170,7 +178,7 @@ const columns: ColumnsType<DataType> | any = [
     {
         title: 'Упаковка',
         dataIndex: 'install',
-        onCell(text: string, r: DataType, index: number) {
+        render(text: string, r: DataType, index: number) {
             return {
                 props: {
                     style: { background: (index % 2 === 0) ? "#F7F6FB" : "" }

@@ -1,6 +1,7 @@
-import style from "./findTab.module.scss"
+import "./findTab.style.scss";
 
 import { Input } from 'antd';
+import { TableFindTab } from "./tableFindTab/TableFindTab.component";
 const { Search } = Input;
 
 export const FindTab = () => {
@@ -9,8 +10,9 @@ export const FindTab = () => {
         console.log(searchField)
     }
     return (
-        <div className={style.findTab}>
+        <div className="findTab">
             <Search placeholder="Поиск" allowClear enterButton="Найти" size="large" onSearch={onSearch} style={{ maxWidth: "608px" }} />
+            <TableFindTab />
         </div>
     )
 }

@@ -24,7 +24,7 @@ const App: FC = () => {
             <Route path="/attribute/*" element={<Attribute />} />
             <Route path='/analytics/*' element={<Analytics />} />
             <Route path='/new-requests' element={<NewRequests />} />
-            <Route path="/find" element={<FindAndEdit />} />
+            <Route path="/find/*" element={<FindAndEdit />} />
           </Routes>
         </main>
       </HandleSidebarProvider>

@@ -154,8 +154,6 @@ export const TableFullList: React.FC = () => {
         {
             title: '',
             dataIndex: 'edit',
-            width: "9.5rem",
-            fixed: 'right',
             render: (_: any, record: Item) => {
                 const editable = isEditing(record);
                 return editable ? (

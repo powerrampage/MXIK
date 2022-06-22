@@ -135,3 +135,29 @@ p {
 .ant-table-cell {
     font-size: rem(18) !important;
 }
+
+
+// SEARCHBOX_STYLE
+.ant-input-affix-wrapper {
+    border-radius: rem(6) !important;
+}
+
+.ant-input-wrapper.ant-input-group {
+    display: flex;
+    align-items: center;
+    gap: rem(20);
+
+    button {
+        padding: rem(10) rem(25);
+        background: #3F448E;
+        border-radius: rem(6) !important;
+    }
+}
+
+
+// TABLE_BODY
+.ant-table-tbody {
+    tr:nth-child(2n) {
+        background-color: #F7F6FB;
+    }
+}

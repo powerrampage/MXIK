@@ -1,0 +1,74 @@
+@use "sass:math";
+@import "../../../../assets/styles/mixin";
+@import "../../../../assets/styles/alias";
+
+.editTab {
+
+    hr {
+        border: rem(1) solid #CDD1DD
+    }
+    button.ant-btn.ant-btn-ghost {
+        padding: rem(10) rem(52.5);
+        box-shadow: 0 rem(20) rem(20) rgba(21, 37, 126, 0.22);
+        border-radius: rem(6);
+        margin-top: rem(30);
+    }
+    .ant-tabs {
+        & > *:not(:last-child) {
+            margin-bottom: rem(35);
+        }
+    }
+    .ant-tabs-nav {
+        &::before {
+            border: 0 !important;
+        }
+    }
+    .ant-tabs-nav-wrap {
+        display: inline-flex;
+    }
+
+    .ant-tabs-nav-list {
+        margin-bottom: rem(40);
+        margin-left: rem(20);
+        box-shadow: 0 rem(15) rem(15) rgba(21, 37, 126, 0.22);
+    }
+
+    .ant-tabs-tab {
+        background-color: #fff;
+        padding: rem(13) rem(40);
+        font-weight: 700;
+        font-size: rem(18);
+        line-height: math.div(26, 18);
+        transition: color 0.2s cubic-bezier(0.4, 0, 1, 1);
+
+        &:hover {
+            color: #3F448E;
+        }
+
+        &.ant-tabs-tab-active {
+            border-bottom: rem(4) solid #6E75D0;
+            z-index: 9;
+            position: relative;
+
+            &::after {
+                display: block;
+                content: '';
+                position: absolute;
+                bottom: rem(-22);
+                left: 42%;
+                border-top: rem(20) solid #6E75D0;
+                border-left: rem(15) solid transparent;
+                border-right: rem(15) solid transparent;
+            }
+
+            & .ant-tabs-tab-btn {
+                color: #3F448E;
+            }
+        }
+    }
+
+    .ant-tabs-tab+.ant-tabs-tab {
+        margin: 0 !important;
+        border-left: rem(1) solid var(--grey-200);
+    }
+}
